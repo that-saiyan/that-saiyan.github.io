@@ -5,96 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
     <style>
-        body {
-            font-family: Verdana, Tahoma, Arial, sans-serif;
-            background-color: #d4e4f7;
-            margin: 0;
-            padding: 0;
-        }
-
-        #header {
-            background: #0078d7;
-            color: white;
-            padding: 10px 15px;
-            text-align: left;
-            font-size: 18px;
-        }
-
-        #navigation {
-            background-color: #f3f3f3;
-            padding: 10px;
-            border-bottom: 2px solid #d3d3d3;
-        }
-
-        #navigation a {
-            text-decoration: none;
-            color: #0078d7;
-            margin-right: 15px;
-            font-weight: bold;
-        }
-
-        #navigation a:hover {
-            text-decoration: underline;
-        }
-
-        #wrapper {
-            display: flex;
-        }
-
-        #sidebar {
-            width: 25%;
-            background-color: #f3f9ff;
-            padding: 10px;
-            border-right: 1px solid #ccc;
-        }
-
-        #sidebar ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        #sidebar ul li {
-            margin: 10px 0;
-        }
-
-        #sidebar ul li a {
-            text-decoration: none;
-            color: #0078d7;
-        }
-
-        #sidebar ul li a:hover {
-            text-decoration: underline;
-        }
-
-        #content {
-            width: 75%;
-            padding: 20px;
-        }
-
-        #footer {
-            background: #f3f3f3;
-            color: #555;
-            text-align: center;
-            padding: 10px 0;
-            border-top: 2px solid #d3d3d3;
-        }
-
-        .profile-picture {
-            float: left;
-            margin-right: 15px;
-            border: 1px solid #ccc;
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-        }
-
-        h2 {
-            color: #0078d7;
-        }
-
-        p {
-            line-height: 1.6;
-        }
+        body{font-family:Verdana, Tahoma, Arial, sans-serif;background-color:#d4e4f7;margin:0;padding:0;cursor:url('resources/CURSOR/windows98.cur'),auto;}
+        #header{background:#0078d7;color:white;padding:10px 15px;text-align:left;font-size:18px;}
+        #navigation{background-color:#f3f3f3;padding:10px;border-bottom:2px solid #d3d3d3;}
+        #navigation a{text-decoration:none;color:#0078d7;margin-right:15px;font-weight:bold;}
+        #navigation a:hover{text-decoration:underline;}
+        #header-image-container{width:100%;height:180px;overflow:hidden;}
+        #header-image{width:100%;height:100%;object-fit:cover;animation:load 2s linear;}
+        @keyframes load{0%{clip-path:polygon(0 0,100% 0,100% 0%,0 0%);}100%{clip-path:polygon(0 0,100% 0,100% 100%,0 100%);}}
+        #wrapper{display:flex;flex-direction:row;align-items:flex-start;margin-top:10px;}
+        #sidebar{width:25%;background-color:rgba(243,249,255,0.9);padding:10px;border-right:1px solid #ccc;box-sizing:border-box;}
+        #sidebar ul{list-style-type:none;padding:0;}
+        #sidebar ul li{margin:10px 0;}
+        #sidebar ul li a{text-decoration:none;color:#0078d7;}
+        #sidebar ul li a:hover{text-decoration:underline;}
+        #sidebar-buttons{margin-top:20px;}
+        #content{width:75%;padding:20px;box-sizing:border-box;}
+        #footer{background:#f3f3f3;color:#555;text-align:center;padding:10px 0;border-top:2px solid #d3d3d3;}
+        .button{display:inline-block;padding:5px 10px;background:linear-gradient(to bottom,#0078d7,#005ba1);color:white;text-decoration:none;border:1px solid #004a8b;border-radius:2px;}
+        .button:hover{background:#005ba1;}
+        .gif-button{width:120px;margin-right:15px;border:1px solid #ccc;border-radius:5px;}
+        .gif-button:hover{opacity:.8;}
     </style>
 </head>
 <body>
@@ -105,32 +36,45 @@
         <a href="#">Downloads</a>
         <a href="#">Other</a>
     </div>
+    <div id="header-image-container">
+        <img src="resources/IMAGE/HEADER.jpg" alt="Header" id="header-image">
+    </div>
     <div id="wrapper">
         <div id="sidebar">
-            <h3>Sidebar</h3>
+            <h3>Quick Links</h3>
             <ul>
                 <li><a href="#">Link 1</a></li>
                 <li><a href="#">Link 2</a></li>
                 <li><a href="#">Link 3</a></li>
                 <li><a href="#">Link 4</a></li>
             </ul>
+            <div id="sidebar-buttons">
+                <a href="#" class="button">Github Repo</a>
+                <a href="#" class="button">Contact</a>
+            </div>
         </div>
         <div id="content">
-            <h2>About</h2>
-            <p>
-                Hello world.
-            </p>
-            <p>
-                hello world.
-            </p>
-            <p>
-               hello world.
-            </p>
+            <h2>About Me</h2>
+            <p>Welcome to my personal website, where I share my projects, ideas, and much more!</p>
+            <p>This website is designed to mimic the look and feel of a 2000s-era website, just for fun. You will find all sorts of content here, including guides, downloads, and more. Feel free to explore and enjoy!</p>
+            <p>If you're interested in my work or want to know more about me, feel free to contact me through the provided links.</p>
+            <a href="#" class="button">Learn More</a>
+            <div id="gif-buttons">
+                <a href="https://support.microsoft.com/en-us/windows/internet-explorer-downloads-d49e1f0d-571c-9a7b-d97e-be248806ca70" target="_blank">
+                    <img src="resources/IMAGE/Internet_Explorer_icon.gif" alt="" class="gif-button">
+                </a>
+                <a href="https://web.archive.org/web/20050801073937/http://www.microsoft.com/" target="_blank">
+                    <img src="resources/IMAGE/ms.gif" alt="" class="gif-button">
+                </a>
+                    <img src="resources/IMAGE/notepad2.gif" alt="" class="gif-button">
+                </a>
+                <a href="https://web.archive.org/web/20050303023911/http://www.microsoft.com/windowsxp/default.mspx" target="_blank">
+                    <img src="resources/IMAGE/WindowsXP.gif" alt="" class="gif-button">
+                </a>
+            </div>
         </div>
     </div>
-    <div id="footer">© <span id="year"></span> That-Saiyan Softworks. All rights reserved.</div>
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    <div id="footer">© 2004-<span id="current-year"></span> That-Saiyan Softworks. All rights reserved.</div>
+    <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
