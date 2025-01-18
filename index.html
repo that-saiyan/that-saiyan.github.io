@@ -10,6 +10,7 @@
             background-color: #d4e4f7;
             margin: 0;
             padding: 0;
+            cursor: url('resources/CURSOR/windows98.cur'), auto; /* Custom cursor */
         }
 
         #header {
@@ -115,6 +116,21 @@
         .button:hover {
             background: #005ba1;
         }
+
+        #gif-buttons {
+            margin-top: 20px;
+        }
+
+        .gif-button {
+            width: 120px; /* Adjust size of GIF */
+            margin-right: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .gif-button:hover {
+            opacity: 0.8;
+        }
     </style>
 </head>
 <body>
@@ -143,6 +159,12 @@
             <p>Welcome to the Internet.</p>
             <p>This website is where my projects, guides, and more are hosted. This website is also just made for fun, it is meant to look like a website from the 2000s.</p>
             <a href="#" class="button">Learn More</a>
+
+            <div id="gif-buttons">
+                <img src="resources/IMAGE/Internet_Explorer_icon.gif" alt="" class="gif-button">
+                <img src="resources/IMAGE/ms.gif" alt="" class="gif-button">
+                <img src="resources/IMAGE/notepad2.gif" alt="" class="gif-button">
+            </div>
         </div>
     </div>
     <div id="footer">© 2004-<span id="current-year"></span> That-Saiyan Softworks. All rights reserved.</div>
