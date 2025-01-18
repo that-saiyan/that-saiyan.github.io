@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to the internet!</title>
+    <title>Welcome to the Internet!</title>
     <style>
         body {
             font-family: Verdana, Tahoma, Arial, sans-serif;
@@ -37,15 +37,37 @@
             text-decoration: underline;
         }
 
+        #header-image-container {
+            width: 100%;
+            height: 180px; /* Adjust the height of the header image */
+            overflow: hidden;
+        }
+
+        #header-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: load 4.3s linear;
+        }
+
+        @keyframes load {
+            0% { clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%); }
+            100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+        }
+
         #wrapper {
             display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            margin-top: 10px; /* Add spacing below the header image */
         }
 
         #sidebar {
             width: 25%;
-            background-color: #f3f9ff;
+            background-color: rgba(243, 249, 255, 0.9); /* Slight transparency */
             padding: 10px;
             border-right: 1px solid #ccc;
+            box-sizing: border-box; /* Includes padding in width */
         }
 
         #sidebar ul {
@@ -69,6 +91,7 @@
         #content {
             width: 75%;
             padding: 20px;
+            box-sizing: border-box;
         }
 
         #footer {
@@ -97,10 +120,13 @@
 <body>
     <div id="header">that-saiyan's world-wide webpage</div>
     <div id="navigation">
-        <a href="#">Home</a>
-        <a href="#">About</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
         <a href="#">Downloads</a>
-        <a href="#">Contact</a>
+        <a href="#">Other</a>
+    </div>
+    <div id="header-image-container">
+        <img src="resources/IMAGE/HEADER.jpg" alt="Header" id="header-image">
     </div>
     <div id="wrapper">
         <div id="sidebar">
@@ -119,6 +145,9 @@
             <a href="#" class="button">Learn More</a>
         </div>
     </div>
-    <div id="footer">© 2004 That-Saiyan Softworks. All rights reserved.</div>
+    <div id="footer">© 2004-<span id="current-year"></span> That-Saiyan Softworks. All rights reserved.</div>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
