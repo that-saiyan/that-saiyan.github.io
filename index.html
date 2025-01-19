@@ -7,14 +7,14 @@
     <style>
         body {
             font-family: Verdana, Tahoma, Arial, sans-serif;
-            background-color: #d4e4f7;
+            background-color: #eab4b4;
             margin: 0;
             padding: 0;
-            cursor: url('resources/CURSOR/windows98.cur'), auto; /* Custom cursor */
+            cursor: url('resources/CURSOR/windows98.cur'), auto;
         }
 
         #header {
-            background: #0078d7;
+            background: #990000;
             color: white;
             padding: 10px 15px;
             text-align: left;
@@ -22,14 +22,14 @@
         }
 
         #navigation {
-            background-color: #f3f3f3;
+            background-color: #f2b2b2;
             padding: 10px;
-            border-bottom: 2px solid #d3d3d3;
+            border-bottom: 2px solid #990000;
         }
 
         #navigation a {
             text-decoration: none;
-            color: #0078d7;
+            color: #990000;
             margin-right: 15px;
             font-weight: bold;
         }
@@ -40,7 +40,7 @@
 
         #header-image-container {
             width: 100%;
-            height: 180px; /* Adjust the height of the header image */
+            height: 180px;
             overflow: hidden;
         }
 
@@ -60,15 +60,15 @@
             display: flex;
             flex-direction: row;
             align-items: flex-start;
-            margin-top: 10px; /* Add spacing below the header image */
+            margin-top: 10px;
         }
 
         #sidebar {
             width: 25%;
-            background-color: rgba(243, 249, 255, 0.9); /* Slight transparency */
+            background-color: rgba(230, 180, 180, 0.9);
             padding: 10px;
-            border-right: 1px solid #ccc;
-            box-sizing: border-box; /* Includes padding in width */
+            border-right: 1px solid #990000;
+            box-sizing: border-box;
         }
 
         #sidebar ul {
@@ -82,7 +82,7 @@
 
         #sidebar ul li a {
             text-decoration: none;
-            color: #0078d7;
+            color: #990000;
         }
 
         #sidebar ul li a:hover {
@@ -93,28 +93,29 @@
             width: 75%;
             padding: 20px;
             box-sizing: border-box;
+            position: relative;
         }
 
         #footer {
-            background: #f3f3f3;
-            color: #555;
+            background: #f2b2b2;
+            color: #6d0000;
             text-align: center;
             padding: 10px 0;
-            border-top: 2px solid #d3d3d3;
+            border-top: 2px solid #990000;
         }
 
         .button {
             display: inline-block;
             padding: 5px 10px;
-            background: linear-gradient(to bottom, #0078d7, #005ba1);
+            background: linear-gradient(to bottom, #990000, #6d0000);
             color: white;
             text-decoration: none;
-            border: 1px solid #004a8b;
+            border: 1px solid #590000;
             border-radius: 2px;
         }
 
         .button:hover {
-            background: #005ba1;
+            background: #6d0000;
         }
 
         #gif-buttons {
@@ -122,9 +123,9 @@
         }
 
         .gif-button {
-            width: 120px; /* Adjust size of GIF */
+            width: 120px;
             margin-right: 15px;
-            border: 1px solid #ccc;
+            border: 1px solid #990000;
             border-radius: 5px;
         }
 
@@ -132,10 +133,23 @@
             opacity: 0.8;
         }
 
-        a:focus {
-    outline: none;
-}
+        #image-side {
+            position: absolute;
+            top: 150px; /* Adjusted position to bring it lower */
+            right: 20px; /* Keeps it aligned to the right side */
+            width: 100px;
+            height: auto;
+            animation: floatIn 2s forwards;
+        }
 
+        @keyframes floatIn {
+            0% { transform: translateX(100px); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+
+        a:focus {
+            outline: none;
+        }
     </style>
 </head>
 <body>
@@ -147,7 +161,7 @@
         <a href="#">Other</a>
     </div>
     <div id="header-image-container">
-        <img src="resources/IMAGE/HEADER.jpg" alt="Header" id="header-image">
+        <img src="resources/IMAGE/HOLIDAY-HEADER.jpg" alt="Header" id="header-image">
     </div>
     <div id="wrapper">
         <div id="sidebar">
@@ -164,7 +178,6 @@
             <p>Welcome to the Internet.</p>
             <p>This website is where my projects, guides, and more are hosted. This website is also just made for fun, it is meant to look like a website from the 2000s.</p>
             <a href="#" class="button">Learn More</a>
-
             <div id="gif-buttons">
                 <a href="https://support.microsoft.com/en-us/windows/internet-explorer-downloads-d49e1f0d-571c-9a7b-d97e-be248806ca70" target="_blank">
                     <img src="resources/IMAGE/Internet_Explorer_icon.gif" alt="" class="gif-button">
@@ -172,19 +185,19 @@
                 <a href="https://web.archive.org/web/20050801073937/http://www.microsoft.com/" target="_blank">
                     <img src="resources/IMAGE/ms.gif" alt="" class="gif-button">
                 </a>
+                <a href="#">
                     <img src="resources/IMAGE/notepad2.gif" alt="" class="gif-button">
                 </a>
                 <a href="https://web.archive.org/web/20050303023911/http://www.microsoft.com/windowsxp/default.mspx" target="_blank">
                     <img src="resources/IMAGE/WindowsXP.gif" alt="" class="gif-button">
                 </a>
             </div>
-            
+            <img src="resources/IMAGE/goofy03a.gif" alt="Goofy Image" id="image-side">
         </div>
     </div>
     <div id="footer">© 2004-<span id="current-year"></span> That-Saiyan Softworks. All rights reserved.</div>
     <script>
         document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
-    
 </body>
 </html>
