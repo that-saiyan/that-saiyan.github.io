@@ -7,14 +7,14 @@
     <style>
         body {
             font-family: Verdana, Tahoma, Arial, sans-serif;
-            background-color: #eab4b4; /* Light red background */
+            background-color: #eab4b4;
             margin: 0;
             padding: 0;
             cursor: url('resources/CURSOR/windows98.cur'), auto;
         }
 
         #header {
-            background: #990000; /* Dark red */
+            background: #990000;
             color: white;
             padding: 10px 15px;
             text-align: left;
@@ -22,14 +22,14 @@
         }
 
         #navigation {
-            background-color: #f2b2b2; /* Light red */
+            background-color: #f2b2b2;
             padding: 10px;
             border-bottom: 2px solid #990000;
         }
 
         #navigation a {
             text-decoration: none;
-            color: #990000; /* Dark red */
+            color: #990000;
             margin-right: 15px;
             font-weight: bold;
         }
@@ -65,7 +65,7 @@
 
         #sidebar {
             width: 25%;
-            background-color: rgba(230, 180, 180, 0.9); /* Light red sidebar */
+            background-color: rgba(230, 180, 180, 0.9);
             padding: 10px;
             border-right: 1px solid #990000;
             box-sizing: border-box;
@@ -82,7 +82,7 @@
 
         #sidebar ul li a {
             text-decoration: none;
-            color: #990000; /* Dark red */
+            color: #990000;
         }
 
         #sidebar ul li a:hover {
@@ -97,8 +97,8 @@
         }
 
         #footer {
-            background: #f2b2b2; /* Light red */
-            color: #6d0000; /* Darker red */
+            background: #f2b2b2;
+            color: #6d0000;
             text-align: center;
             padding: 10px 0;
             border-top: 2px solid #990000;
@@ -135,8 +135,8 @@
 
         #image-side {
             position: absolute;
-            top: 150px; /* Adjusted position to bring it lower */
-            right: 20px; /* Keeps it aligned to the right side */
+            top: 150px;
+            right: 20px;
             width: 100px;
             height: auto;
             animation: floatIn 2s forwards;
@@ -150,9 +150,30 @@
         a:focus {
             outline: none;
         }
+
+        .blink {
+            animation: blink-animation 1s steps(2, start) infinite;
+            color: red;
+            font-weight: bold;
+        }
+
+        @keyframes blink-animation {
+            to {
+                visibility: hidden;
+            }
+        }
+
+        marquee {
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #990000;
+            padding: 5px 0;
+        }
     </style>
 </head>
 <body>
+    <marquee>You are currently on the About page.</marquee>
     <div id="header">that-saiyan's world-wide webpage</div>
     <div id="navigation">
         <a href="index.html">Home</a>
@@ -175,7 +196,7 @@
         </div>
         <div id="content">
             <h2>About Us</h2>
-            <p>Welcome to the Internet!</p>
+            <p class="blink">Welcome to the Internet!</p>
             <p>This website hosts my projects, guides, and more, all designed with a nostalgic 2000s feel. It’s meant to take you back in time and enjoy the old-school internet vibe.</p>
             <a href="#" class="button">Learn More</a>
             <div id="gif-buttons">
