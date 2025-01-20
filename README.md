@@ -6,4 +6,4 @@
 - all images on this site are not owned by me. see credits for who made them.
 - some GIF's were downloaded from the Internet Archive, shout out to them! They are a nonprofit organization who have been archiving the internet since.. who knows how long?!
 
-  # THIS SITE HAS BEEN MOVED, WHILE THIS ONE WILL KEEP UPDATING SOME PAGES WONT WORK. GO TO http://saiyan.great-site.net/index.html FOR THE UPDATED SITE.
+  # THIS SITE HAS BEEN MOVED, GO TO http://saiyan.great-site.net/index.html FOR THE UPDATED SITE.
